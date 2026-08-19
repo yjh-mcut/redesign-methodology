@@ -148,29 +148,3 @@ Four rules were extracted from the documented redesign cycles; two further entri
   <em>R4 in the hardware: the conventional six-joint serial leg (left) against the five-joint parallel structure (right), which omits the knee actuator and reproduces knee flexion through a parallelogram linkage.</em>
 </p>
 
----
-
-## Before you reuse this
-
-If you are adapting the analysis to another platform, the parameters that matter most are in `PARAMETERS`, and the two assumptions worth re-deriving for your hardware are the usable torque and the mesh efficiency. The rules above are stated with their applicability conditions for the same reason.
-
----
-
-## Citation
-
-```bibtex
-@article{yang2026upgrading,
-  author  = {Yang, Jeehyun},
-  title   = {Upgrading Humanoid Robot Mechatronics Without Replacing Actuators:
-             A Field-Failure-Driven Redesign Methodology},
-  journal = {Applied Sciences},
-  year    = {2026},
-  note    = {Manuscript}
-}
-```
-
-This work extends a paper presented at the IASDR Congress, 2025. The platform itself is described in *Lightweight mechatronic system for humanoid robot*, The Knowledge Engineering Review 38, e5 (2023).
-
-## License
-
-Released under the MIT License. See `LICENSE`.
