@@ -28,6 +28,6 @@ analysis/
 data/
   failure_log_TEMPLATE.csv  structure for the per-match failure record
 docs/
-  images/                   figures used in this README
+  images/                   figures used in the paper
 ```
 
