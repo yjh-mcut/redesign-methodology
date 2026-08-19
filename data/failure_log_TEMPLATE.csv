@@ -1,0 +1,4 @@
+generation,year,competition,event,match_id,match_duration_min,failure_mode,joint,description,match_halted,source
+Generation 1,2017,RoboCup Humanoid League,AdultSize soccer,EXAMPLE-M1,20,fastener,hip_yaw,M3 screw sheared under torsional load,yes,match log
+Generation 1,2017,RoboCup Humanoid League,AdultSize soccer,EXAMPLE-M1,20,detachment,left_leg,leg detached following the fastener failure,yes,match video
+Generation 1,2017,RoboCup Humanoid League,AdultSize soccer,EXAMPLE-M3,20,none,,no failure recorded,no,match log
