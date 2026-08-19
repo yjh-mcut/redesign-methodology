@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this analysis, please cite the accompanying paper."
+title: "Upgrading Humanoid Robot Mechatronics Without Replacing Actuators: A Field-Failure-Driven Redesign Methodology"
+authors:
+  - family-names: Yang
+    given-names: Jeehyun
+    affiliation: "Department of Industrial Design, Ming Chi University of Technology"
+    email: yjh@mail.mcut.edu.tw
+version: "1.0.0"
+date-released: "2026-01-01"
+license: MIT
+keywords:
+  - humanoid robot
+  - design methodology
+  - iterative redesign
+  - reliability engineering
+  - resource-constrained design
