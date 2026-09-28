@@ -36,7 +36,9 @@ study, the screen-divergence comparison, and the failure record with its
 exposure and intervals — and writes two figures to `analysis/outputs/`.
 
 The failure counts it works from are per-season totals, in the `FAILURES` block
-and in `analysis/failure_counts.csv`. The match counts come from the league's
+and in `analysis/failure_counts.csv`, which is the released form of the record
+behind Tables 12 and 13 of the paper. The paper submits no separate
+supplementary files. The match counts come from the league's
 published results and are documented; the failure counts are a joint
 recollection by the author and J. Jeong, assembled after the deployments. There
 is no match-by-match record: the recollection does not support one, so none is
@@ -144,8 +146,8 @@ follow from that.
 ```
 analysis/
   reproduce_analysis.py      every analytical table and figure, one file
-  failure_counts.csv         per-season failure counts and their provenance;
-                             the same table is Supplementary Table S1
+  failure_counts.csv         per-season failure counts and their provenance,
+                             the record behind Tables 12 and 13 of the paper
 bench/
   config.py                  all settings
   dxl_common.py              bus helpers, angle conversion, torque model

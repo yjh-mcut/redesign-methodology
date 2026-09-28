@@ -1,5 +1,7 @@
-# Supplementary Table S1
 # Failure counts by season, as recalled by the author and J. Jeong.
+#
+# This is the record behind Tables 12 and 13 of the paper. No supplementary
+# files are submitted separately; this file is the released form of it.
 #
 # Match counts are taken from the RoboCup Humanoid League published results and
 # are documented. Failure counts and the joints affected are a joint recollection,
@@ -16,7 +18,7 @@
 #   - no incident caused the robot to be withdrawn; every one was repaired after
 #     the match in which it was noticed, so detection and occurrence are not the
 #     same event
-#   - the confidence intervals in Table 10 quantify sampling variation in these
+#   - the confidence intervals in Table 12 of the paper quantify sampling variation in these
 #     counts only and carry no allowance for recall error
 #   - the fall in incidence is a descriptive record, not evidence of a causal
 #     effect of the redesign
