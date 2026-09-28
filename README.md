@@ -35,11 +35,13 @@ allocation, frontal-plane measures, which condition binds, the sensitivity
 study, the screen-divergence comparison, and the failure record with its
 exposure and intervals — and writes two figures to `analysis/outputs/`.
 
-The failure counts it works from are the per-generation totals, which are in the
-`FAILURES` block. The match-by-match reconstruction behind them is Supplementary
-Table S1 of the paper, not part of this repository;
-`analysis/failure_log_TEMPLATE.csv` gives the schema it follows and contains
-example rows only.
+The failure counts it works from are per-season totals, in the `FAILURES` block
+and in `analysis/failure_counts.csv`. The match counts come from the league's
+published results and are documented; the failure counts are a joint
+recollection by the author and J. Jeong, assembled after the deployments. There
+is no match-by-match record: the recollection does not support one, so none is
+published. The intervals the script computes quantify sampling variation in the
+reported counts and carry no allowance for recall error.
 
 Every model parameter sits in one `PARAMETERS` block at the top of the file.
 Change any of them and rerun. That is the point of publishing this rather than
@@ -142,9 +144,8 @@ follow from that.
 ```
 analysis/
   reproduce_analysis.py      every analytical table and figure, one file
-  failure_log_TEMPLATE.csv   the schema of the per-match failure record, with
-                             example rows only -- the reconstruction itself is
-                             Supplementary Table S1 of the paper
+  failure_counts.csv         per-season failure counts and their provenance;
+                             the same table is Supplementary Table S1
 bench/
   config.py                  all settings
   dxl_common.py              bus helpers, angle conversion, torque model

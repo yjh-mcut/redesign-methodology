@@ -1,0 +1,44 @@
+# Supplementary Table S1
+# Failure counts by season, as recalled by the author and J. Jeong.
+#
+# Match counts are taken from the RoboCup Humanoid League published results and
+# are documented. Failure counts and the joints affected are a joint recollection,
+# assembled after the deployments, and are not a contemporaneous maintenance log.
+# The recollection does not extend to placing each incident in a particular match,
+# so no match attribution is given.
+#
+# Incidents are listed by season and joint. Incident E03 (2017) involved both the
+# hip yaw and the knee and is counted once as an incident and under each joint,
+# so the joint entries sum to ten over nine incidents.
+#
+# Limitations, restated from Section 6.5 of the paper:
+#   - recall may omit minor incidents and may misplace them between seasons
+#   - no incident caused the robot to be withdrawn; every one was repaired after
+#     the match in which it was noticed, so detection and occurrence are not the
+#     same event
+#   - the confidence intervals in Table 10 quantify sampling variation in these
+#     counts only and carry no allowance for recall error
+#   - the fall in incidence is a descriptive record, not evidence of a causal
+#     effect of the redesign
+#
+season,generation,matches_main,matches_dropin,matches_total,matches_source,incidents,incidents_source
+2017,Generation 1,5,0,5,league published results,4,recalled jointly by the author and J. Jeong
+2018,Generation 2,4,5,9,league published results,3,recalled jointly by the author and J. Jeong
+2019,Generation 3,6,6,12,league published results,2,recalled jointly by the author and J. Jeong
+#
+# Incidents by joint and season
+incident_id,season,joint,also_affected,notes
+E01,2017,hip yaw,,
+E02,2017,hip yaw,,
+E03,2017,hip yaw,knee,counted under both joints; one incident
+E04,2017,hip yaw,,
+E05,2018,hip yaw,,
+E06,2018,hip pitch,,
+E07,2018,knee,,
+E08,2019,hip pitch,,
+E09,2019,hip pitch,,
+#
+# All nine are recalled as occurring in main-tournament play. Which matches were
+# main tournament and which were Drop-In is documented; that the incidents fall
+# in the former is recollection, at the grain of match type and not of individual
+# matches.
