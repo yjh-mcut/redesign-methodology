@@ -35,6 +35,12 @@ allocation, frontal-plane measures, which condition binds, the sensitivity
 study, the screen-divergence comparison, and the failure record with its
 exposure and intervals — and writes two figures to `analysis/outputs/`.
 
+The failure counts it works from are the per-generation totals, which are in the
+`FAILURES` block. The match-by-match reconstruction behind them is Supplementary
+Table S1 of the paper, not part of this repository;
+`analysis/failure_log_TEMPLATE.csv` gives the schema it follows and contains
+example rows only.
+
 Every model parameter sits in one `PARAMETERS` block at the top of the file.
 Change any of them and rerun. That is the point of publishing this rather than
 only the numbers: the paper's own conclusion is that the design clears its
@@ -136,7 +142,9 @@ follow from that.
 ```
 analysis/
   reproduce_analysis.py      every analytical table and figure, one file
-  failure_log_TEMPLATE.csv   structure of the per-match failure record
+  failure_log_TEMPLATE.csv   the schema of the per-match failure record, with
+                             example rows only -- the reconstruction itself is
+                             Supplementary Table S1 of the paper
 bench/
   config.py                  all settings
   dxl_common.py              bus helpers, angle conversion, torque model
