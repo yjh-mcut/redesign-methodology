@@ -1,0 +1,1 @@
+﻿run_id,t_s,wall_time,phase,load_target_Nm,payload_kg,speed_target_rad_s,t_acc_s,t_const_s,dir,q_deg,q_dot_rad_s,tau_grav_Nm,pos1,spd1_rpm,load1_pct,volt1,temp1_C,pos2,spd2_rpm,load2_pct,volt2,temp2_C,q2_deg,dq12_deg,comm_fail,note

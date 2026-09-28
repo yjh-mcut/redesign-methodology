@@ -1,0 +1,1 @@
+﻿run_id,t_s,wall_time,load_target_Nm,payload_kg,q_deg,q_err_deg,tau_grav_Nm,pos1,load1_pct,volt1,temp1_C,pos2,load2_pct,volt2,temp2_C,q2_deg,dq12_deg,comm_fail,abort_reason,note

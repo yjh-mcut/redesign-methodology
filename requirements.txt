@@ -1,3 +1,9 @@
+# Analysis only (analysis/reproduce_analysis.py, bench/make_figures.py,
+# bench/analyze.py).  None of these talk to hardware.
 numpy>=1.24
 scipy>=1.10
 matplotlib>=3.7
+
+# Acquisition only (bench/exp*.py, measure_noload.py, set_limits.py, ...).
+# Not needed to reproduce anything from the published logs.
+# dynamixel-sdk>=3.7.31
