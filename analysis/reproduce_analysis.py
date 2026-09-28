@@ -311,6 +311,18 @@ def table_failures():
     rr_m, wald_m, exact_m = rate_ratio_intervals(c1m, e1m, c3m, e3m)
     print(f'    rate ratio {rr_m:.2f}   log-Wald [{wald_m[0]:.2f}, {wald_m[1]:.2f}]   '
           f'exact [{exact_m[0]:.2f}, {exact_m[1]:.2f}]')
+    # The hip-yaw pattern was noticed first and examined afterwards, so this is
+    # exploratory. Conditioning on the five incidents, how do they fall between
+    # the exposures before and after the idler bearing was fitted?
+    print('\n  hip-yaw incidents, five before the idler bearing and none after:')
+    for label, before, after in (('all matches', 14, 12), ('main tournament only', 9, 6)):
+        n, k = before + after, 5
+        p0 = before / n
+        probs = [binom.pmf(i, k, p0) for i in range(k + 1)]
+        two = sum(x for x in probs if x <= probs[k] + 1e-12)
+        print(f'    {label:<22} {before}/{after}   one-sided {p0**k:.3f}   two-sided {two:.3f}')
+    print('    exploratory: the joint was examined because the pattern was noticed')
+
     print('\n  restricting exposure to main-tournament play halves the rate ratio.')
     print('  That is arithmetic, not an estimate of what the change contributed,')
     print('  and neither interval excludes unity.')
