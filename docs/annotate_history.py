@@ -22,10 +22,10 @@ DST = 'docs/images/fig_history_annotated.png'
 GEAR = '#c0392b'
 IDLER = '#1f6fb4'
 
-# The idler-bearing race sits above the servo plate and is the one thing the
-# third generation has that the second does not.  Measured extent x 554-647,
-# y 7-18; the servo plate below starts at y = 19.
-IDLER_RING = dict(centre=(600.5, 12.5), semi=(50.0, 8.5))
+# The idler-bearing race sits at the bottom of the hip-yaw assembly, under the
+# two yaw servos and just above where the legs begin -- the position Figure 5
+# shows it installed in.  Measured extent x 552-652, y 30-43.
+IDLER_RING = dict(centre=(602.0, 36.5), semi=(52.0, 9.0))
 
 GENERATIONS = [  # x window, label, first contested, stance
     ((0, 200), 'Generation 1', 2017, '$W$ = 26.0 cm'),
@@ -57,9 +57,23 @@ def find_gears(rgb):
                         seen[ny, nx] = True
                         queue.append((ny, nx))
         if len(pts) >= 40:                    # ignore stray lavender pixels
-            a = np.array(pts)
-            out.append((a[:, 1].mean(), a[:, 0].mean()))
+            out.append(fit_circle(np.array(pts)))
     return sorted(out)
+
+
+def fit_circle(pts):
+    """Centre of the gear from a least-squares circle through its rim.
+
+    The lavender is the gear rim, and it is partly occluded at every axis, so
+    the centroid of those pixels sits about four pixels off the true centre --
+    low at the hip roll, high at the ankle.  Fitting a circle uses the curvature
+    instead and is not fooled by a missing arc.
+    """
+    y = pts[:, 0].astype(float)
+    x = pts[:, 1].astype(float)
+    a = np.c_[2 * x, 2 * y, np.ones(len(x))]
+    (cx, cy, _), *_ = np.linalg.lstsq(a, x ** 2 + y ** 2, rcond=None)
+    return cx, cy
 
 
 def find_legs(grey, x0, x1, y0=120, y1=260):
